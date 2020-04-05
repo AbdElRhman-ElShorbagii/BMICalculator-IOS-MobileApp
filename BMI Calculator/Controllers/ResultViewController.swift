@@ -14,11 +14,17 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     
     var bmiResult: String?
+    var advice: String?
+    var bgColor: UIColor?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         resultLabel.text = bmiResult
+        adviceLabel.text = advice
+        view.backgroundColor = bgColor
     }
     @IBAction func reCalculateButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
